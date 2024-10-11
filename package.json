@@ -5,6 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "test": "vitest run",
+    "test:bonus": "BONUS_CHALLENGE=on vitest run",
     "dev": "nodemon",
     "start": "ts-node src/server.ts"
   },
