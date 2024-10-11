@@ -1,4 +1,4 @@
-# Challenge 4 - Secrets Manager
+# Challenge 4 - Secrets Manager (Bonus)
 
 ## Helpful Links
 
