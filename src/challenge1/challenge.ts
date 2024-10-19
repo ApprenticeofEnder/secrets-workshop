@@ -2,12 +2,12 @@ import jwt from "jsonwebtoken";
 
 const SECRET = "secrettoken";
 
-export function login(username: string, password: string): string {
+export function login(username: string, password: string): string | null {
   // TODO: Implement me!
   return "";
 }
 
-export function verifyJWT(token: string): boolean {
+export function verifyJwt(token: string): boolean {
   // TODO: Implement me!
   return false;
 }

@@ -4,8 +4,11 @@
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
+    "challenge1": "vitest run challenge1",
+    "challenge2": "vitest run challenge2",
+    "challenge3": "vitest run challenge3",
+    "test:server": "vitest run server",
     "test": "vitest run",
-    "test:bonus": "BONUS_CHALLENGE=on vitest run",
     "dev": "nodemon",
     "start": "ts-node src/server.ts"
   },

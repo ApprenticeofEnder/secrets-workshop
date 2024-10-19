@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken";
 import { describe, expect, test } from "vitest";
 import { faker } from "@faker-js/faker";
 
-import { login, verifyJWT, correctUsernameAndPassword } from "./challenge";
+import { login, verifyJwt, correctUsernameAndPassword } from "./challenge";
 
 const USERNAME = "johndoe";
 const PASSWORD = "johndoe";
@@ -14,7 +14,8 @@ const PASSWORD = "johndoe";
 describe("CHALLENGE 1", () => {
   test("login produces a JWT", () => {
     const token = login(USERNAME, PASSWORD);
-    const decodedToken = jwt.decode(token);
+    expect(token).not.toBeNull();
+    const decodedToken = jwt.decode(token!);
     expect(decodedToken).toBe({
       user: USERNAME,
     });
@@ -32,16 +33,16 @@ describe("CHALLENGE 1", () => {
     }
   });
 
-  test("verifyJWT works properly", () => {
+  test("verifyJwt works properly", () => {
     const token = login(USERNAME, PASSWORD);
-    expect(verifyJWT(token)).toBe(true);
+    expect(verifyJwt(token!)).toBe(true);
     const bogusToken = jwt.sign(
       {
         user: USERNAME,
       },
       "notasecret",
     );
-    expect(verifyJWT(bogusToken)).toBe(false);
+    expect(verifyJwt(bogusToken)).toBe(false);
   });
 });
 
