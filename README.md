@@ -23,12 +23,12 @@ That's the point of tests: they're consistent and thoroughly test the functional
 To run the challenges:
 
 ```bash
-npm run challenge1 # Challenge 1
-npm run challenge2 # Challenge 2
-npm run challenge3 # Challenge 3
-                   # No tests for challenge 4 . . . you'll see why!
+npm run challenge1      # Challenge 1
+npm run challenge2      # Challenge 2
+npm run challenge3      # Challenge 3
+                        # No tests for challenge 4 . . . you'll see why!
 npm run test:server     # to make sure the server is running as expected
-npm test       # to test *everything*, including the challenges
+npm test                # to test *everything*, including the challenges
 ```
 
 There's no real incentive for completing these challenge quickly or slowly.
