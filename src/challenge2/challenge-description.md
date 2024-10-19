@@ -16,7 +16,7 @@ you can use `process.ENV.JWT_SECRET`, with `JWT_SECRET` being the name of the en
 
 The best way of doing this is with `.env` files. See if you can't re-implement the functions from earlier using the `dotenv` library.
 
-> [!TIP] Generating Tokens
+> [!TIP]
 > Most languages have a cryptographically secure pseudorandom number generator (translation: secure RNG) module.
 > For example, this one-liner can generate super long tokens with NodeJS:
 > ```javascript
