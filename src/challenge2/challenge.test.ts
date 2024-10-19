@@ -2,6 +2,7 @@
  * CAUTION: DO NOT MODIFY THIS FILE!!!
  */
 
+import axios, { AxiosResponse } from "axios";
 import jwt from "jsonwebtoken";
 import { describe, expect, test } from "vitest";
 import { faker } from "@faker-js/faker";
@@ -17,6 +18,24 @@ describe("CHALLENGE 2", () => {
     expect(process.env.JWT_SECRET).not.toBe(undefined);
   });
 
+  test("login produces a JWT", async () => {
+    const token = login(USERNAME, PASSWORD);
+    expect(token).not.toBeNull();
+    const decodedToken = jwt.decode(token!);
+    expect(decodedToken).toBe({
+      user: USERNAME,
+    });
+    const apiRes: AxiosResponse = await axios.post(
+      "http://localhost:3000/challenge-1/login",
+      {
+        username: USERNAME,
+        password: PASSWORD,
+      },
+      { headers: { "Content-Type": "application/json" } },
+    );
+    expect(apiRes.data).toHaveProperty("status", "success");
+  });
+
   test("verifyJwt works properly", () => {
     const token = jwt.sign(
       {
@@ -29,7 +48,7 @@ describe("CHALLENGE 2", () => {
       {
         user: USERNAME,
       },
-      "secret",
+      "notasecret",
     );
     expect(verifyJwt(bogusToken)).toBe(false);
   });
@@ -46,6 +65,8 @@ describe("CHALLENGE 2", () => {
     }
   });
 });
+
+export default {};
 
 /*
  * CAUTION: DO NOT MODIFY THIS FILE!!!

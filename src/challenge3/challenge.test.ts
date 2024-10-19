@@ -5,6 +5,8 @@
 import { simpleGit } from "simple-git";
 import { describe, expect, test } from "vitest";
 
+import "../challenge2/challenge.test";
+
 describe("CHALLENGE 3", () => {
   test(".env file is ignored", async () => {
     const git = simpleGit();

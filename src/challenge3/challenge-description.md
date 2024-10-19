@@ -15,9 +15,11 @@ Irrevocably!
 
 Any time you accidentally commit a secret to Github, assume it's compromised and rotate (change) it accordingly.
 
+Now, if we're going to have our `.env` file ignored by Git . . . how do we let other people know what the format is?
+
 **To pass this challenge, you'll need to make sure that the .env file is not tracked by Git whatsoever.**
 
 ## Useful Links
 
-[Env File: The Only Guide You'll Need](https://onboardbase.com/blog/env-file-guide/)
-[How to Delete a File From Git](https://www.geeksforgeeks.org/how-to-delete-a-file-from-a-git-repository/)
+- [Env File: The Only Guide You'll Need](https://onboardbase.com/blog/env-file-guide/)
+- [How to Delete a File From Git](https://www.geeksforgeeks.org/how-to-delete-a-file-from-a-git-repository/)

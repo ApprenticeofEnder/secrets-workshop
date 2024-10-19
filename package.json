@@ -10,7 +10,7 @@
     "test:server": "vitest run server",
     "test": "vitest run",
     "dev": "nodemon",
-    "start": "ts-node src/server.ts"
+    "start": "ts-node --files src/server.ts"
   },
   "author": "",
   "license": "ISC",

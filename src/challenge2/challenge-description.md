@@ -18,6 +18,6 @@ The best way of doing this is with `.env` files. See if you can't re-implement t
 
 ## Useful Links
 
-[dotenv](https://www.npmjs.com/package/dotenv)
-[Working with .env files in typescript](https://dev.to/asjadanis/parsing-env-with-typescript-3jjm)
-[Env File: The Only Guide You'll Need](https://onboardbase.com/blog/env-file-guide/)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [Working with .env files in typescript](https://dev.to/asjadanis/parsing-env-with-typescript-3jjm)
+- [Env File: The Only Guide You'll Need](https://onboardbase.com/blog/env-file-guide/)
