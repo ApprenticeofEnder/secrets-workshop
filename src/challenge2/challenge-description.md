@@ -21,7 +21,7 @@ The best way of doing this is with `.env` files. See if you can't re-implement t
 > For example, this one-liner can generate super long tokens with NodeJS:
 > ```javascript
 > require('crypto').randomBytes(256).toString('base64')
-```
+> ```
 
 ## Useful Links
 
